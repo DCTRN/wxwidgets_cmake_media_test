@@ -12,7 +12,23 @@ endif()
 
 set(wxWidgets_USE_STATIC 1)
 
-find_package(wxWidgets REQUIRED)
+
+find_package(PkgConfig) #finding pkg-config is a helper tool
+pkg_check_modules(GSTREAMER REQUIRED gstreamer-1.0 gstreamer-video-1.0 gstreamer-player-1.0)
+include_directories(
+        ${GLIB_INCLUDE_DIRS}
+        ${GSTREAMER_INCLUDE_DIRS}
+)
+link_directories(
+        ${GLIB_LIBRARY_DIRS}
+        ${GSTREAMER_LIBRARY_DIRS}
+)
+
+# find_package(wxWidgets REQUIRED)
+find_package(wxWidgets COMPONENTS base gl core media REQUIRED)
+
+message(xWidgets_LIBRARIES: ${wxWidgets_LIBRARIES})
+message(GSTREAMER_LIBRARIES: ${GSTREAMER_LIBRARIES})
 
 set(SRCS main.cpp)
 
@@ -31,3 +47,4 @@ else()
 endif()
 
 target_link_libraries(main PRIVATE ${wxWidgets_LIBRARIES})
+target_link_libraries(main PRIVATE ${GSTREAMER_LIBRARIES})
