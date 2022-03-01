@@ -38,8 +38,8 @@
         "name": "Linux",
         "includePath": [
             "${workspaceFolder}/src/**",
-            "${workspaceFolder}/build/stage/include/wx-3.1/**",
-            "${workspaceFolder}/build/subprojects/Build/wxWidgets_external/lib/wx/include/gtk3-unicode-static-3.1/**"
+            "${workspaceFolder}/build/subprojects/Source/wxWidgets_external/include/**",
+            "${workspaceFolder}/build/subprojects/Build/wxWidgets_external/lib/wx/include/gtk3-unicode-3.1/**"
         ],
         "defines": [
             "__WXGTK__"
