@@ -30,7 +30,7 @@ find_package(wxWidgets COMPONENTS base gl core media REQUIRED)
 message(xWidgets_LIBRARIES: ${wxWidgets_LIBRARIES})
 message(GSTREAMER_LIBRARIES: ${GSTREAMER_LIBRARIES})
 
-set(SRCS main.cpp)
+set(SRCS main.cpp wxMediaPlayerApp.cpp wxMediaPlayerFrame.cpp)
 
 include(${wxWidgets_USE_FILE})
 
