@@ -6,14 +6,12 @@
 #include "wx/wx.h"
 #endif
 
-#include "wx/mediactrl.h" // for wxMediaCtrl
-#include "wx/listctrl.h"  // for wxListCtrl
+#include "wxMediaPlayerNotebookPage.hpp"
+#include "wxMediaPlayerTimer.hpp"
 
-class wxMediaPlayerTimer;
+#include "wx/mediactrl.h" // for wxMediaCtrl
+
 class wxMediaPlayerApp;
-class wxMediaPlayerNotebookPage;
-class wxMediaPlayerTimer;
-class wxNotebook;
 
 class wxMediaPlayerFrame : public wxFrame
 {
